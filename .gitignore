@@ -146,4 +146,6 @@ dmypy.json
 
 # profiling data
 .prof
+/media
 venv
+/static
