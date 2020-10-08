@@ -1,12 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BT Real Estate</title>
-</head>
-<body>
-{% block content %}
-{% endblock %}
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Real Estate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <title>BT Real Estate</title>
+  </head>
+  <body>
+    {% include 'partials/_topbar.html' %}
+    {% include 'partials/_navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+    <!-- Footer -->
+    <footer id="main-footer" class="py-4 bg-primary text-white text-center">
+      Copyright &copy;
+      <span class="year"></span> BT Real Estate
+    </footer>
+
+    {% include 'partials/_footer.html' %}
+
+  </body>
 </html>
